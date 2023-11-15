@@ -14,7 +14,9 @@ html {
   }
   
   /* theme.css */
-    
+  $font-family-sans-serif: 'Poppins', sans-serif;
+  $font-weight-regular: 500;
+  $font-weight-bold: 700;
   :root {
     /* Primary */
     --cyan: hsl(180, 66%, 49%);
@@ -30,13 +32,13 @@ html {
     --very-dark-violet: hsl(260, 8%, 14%);
   
     /* Typography */
-    --font-family-sans-serif: 'Poppins', sans-serif;
-    --font-weight-regular: 500;
-    --font-weight-bold: 700;
-  }
+    --font-family-sans-serif: #{$font-family-sans-serif};
+    --font-weight-regular: #{$font-weight-regular};
+    --font-weight-bold: #{$font-weight-bold};
+    }
   
   body {
-    font: 500 18px/1.5 var(--font-family-sans-serif);
+    font: #{$font-weight-regular} 18px/1.5 var(--font-family-sans-serif);
   }
   
   h1,
@@ -45,7 +47,7 @@ html {
   h4,
   h5,
   h6 {
-    font-weight: 700;
+    font-weight: #{$font-weight-bold};
     font-family: var(--font-family-sans-serif);
     margin: 0;
   }
@@ -87,18 +89,18 @@ html {
     line-height: 1;
   }
   
-  .btn-small {
+  &-small {
     line-height: 1.5;
     font-size: 16px;
     padding: 8px 25px;
   }
   
-  .btn-primary {
+  &-primary {
     background-color: var(--cyan);
     color: white;
   }
   
-  .btn-secondary {
+  &secondary {
     background-color: white;
     color: var(--grayish-violet);
   }
@@ -161,8 +163,8 @@ html {
     text-decoration: none;
     color: var(--grayish-violet);
   }
-  
-  .app-header .navbar-nav a:active {
+  //.app-header .navbar-nav a:active {
+  &:active {
     color: var(--dark-violet);
   }
   
@@ -213,14 +215,15 @@ html {
       padding: 20px 24px 40px;
       border-radius: 9px;
     }
-    .app-header .navbar-nav a {
+    //.app-header .navbar-nav a {
+      a {
       padding: 15px 0;
       margin-right: 0;
       font-size: 18px;
       color: white;
     }
   
-    .app-header .navbar-nav a:active {
+    &active {
       color: var(--gray);
     }
   
@@ -237,7 +240,8 @@ html {
       margin-bottom: 15px;
     }
   
-    .app-header .btn-login:active {
+    //.app-header .btn-login:active {
+      &active{
       color: var(--gray);
     }
     .separator-mobile {
