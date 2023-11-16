@@ -68,13 +68,7 @@ html {
     display: grid;
     grid-template-columns: minmax(15px, 165px) 1fr minmax(15px, 165px);
   }
-  
-  @media (max-width: 468px) {
-    .root {
-      grid-template-columns: 15px 1fr 15px;
-    }
-  }
-  
+
   /* Otros estilos... (botones, encabezado, intro, stats, start-now, app-footer, etc.) */
   
 
@@ -191,72 +185,6 @@ html {
     height: 0;
   }
   
-  @media (max-width: 468px) {
-    .app-header {
-      height: 90px;
-    }
-  
-    .app-header .toggle-nav {
-      display: block;
-    }
-  
-    .app-header .navbar {
-      justify-content: space-between;
-    }
-  
-    .app-header .navbar-nav {
-      position: absolute;
-      top: 90px;
-      left: 15px;
-      right: 15px;
-      background-color: var(--dark-violet);
-      display: flex;
-      flex-direction: column;
-      padding: 20px 24px 40px;
-      border-radius: 9px;
-    }
-    //.app-header .navbar-nav a {
-      a {
-      padding: 15px 0;
-      margin-right: 0;
-      font-size: 18px;
-      color: white;
-    }
-  
-    &active {
-      color: var(--gray);
-    }
-  
-    .app-header .btn {
-      align-self: stretch;
-      font-weight: var(--font-weight-bold);
-      font-size: 18px;
-    }
-  
-    .app-header .btn-login {
-      margin-left: 0;
-      color: white;
-      background-color: transparent;
-      margin-bottom: 15px;
-    }
-  
-    //.app-header .btn-login:active {
-      &active{
-      color: var(--gray);
-    }
-    .separator-mobile {
-        background: var(--gray);
-        height: 1px;
-        align-self: stretch;
-        margin: 20px 0 30px;
-      }
-    
-      #nav-visible:not(:checked) ~ .navbar .navbar-nav {
-        display: none;
-      }
-    }
-
-  
   /* #region Intro */
 
 .intro {
@@ -336,63 +264,6 @@ html {
     border-radius: 9px;
   }
 
-  @media (max-width: 468px) {
-    .intro .content {
-        grid-row: 2;
-        max-width: none;
-        align-items: center;
-      }
- 
-
-    .intro .title {
-      font-size: 42px;
-      text-align: center;
-      margin-bottom: 25px;
-    }
-  
-    .intro .desc {
-      color: var(--grayish-violet);
-      text-align: center;
-      max-width: none;
-      margin-bottom: 35px;
-    }
-  
-    .intro .img-wrapper {
-      width: 100%;  
-      max-width: 530px;
-      margin:0 auto;
-      padding-left: 15px;
-    }
-    .intro img {
-      margin-bottom: 40px;
-      object-position: 0px 0;
-      width: 100%;
-    }
-  
-    .intro .shorten-url-form {
-      grid-row: 3;
-      flex-direction: column;
-      align-items: stretch;
-    }
-  
-    .intro .shorten-url-form {
-      background: var(--dark-violet) url(images/bg-shorten-mobile.svg) no-repeat;
-      background-position: right top;
-      padding: 25px;
-    }
-  
-    .intro .shorten-url-form input {
-      width: 100%;
-      margin-bottom: 15px;
-      padding: 12px 23px;
-      font-size: 16px;
-    }
-  
-    .intro .shorten-url-form .btn {
-      padding: 16px 40px;
-    }
-}
-  
   /* #region Stats */
 .stats {
     grid-column: 1/4;
@@ -498,59 +369,6 @@ html {
     transform: rotateZ(90deg);
     height: 30px;
   }
-  @media (max-width: 468px) {
-    .stats .title {
-      font-size: 32px;
-    }
-  
-    .stats .desc {
-      line-height: 1.8;
-    }
-  
-    .stats .desc br {
-      display: none;
-    }
-  
-    .cards {
-      grid-template-columns: 1fr;
-      row-gap: 92px;
-    }
-  
-    .cards .card {
-      text-align: center;
-    }
-  
-    .card:not(:last-child)::after {
-      position: absolute;
-      content: '';
-      background-color: var(--cyan);
-      width: 8px;
-      height: 47px;
-      left: 50%;
-      top: 100%;
-      right: auto;
-      transform: translateX(-50%);
-    }
-  
-    .card .card-icon {
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  
-    .card .card-body {
-      font-size: 15px;
-      line-height: 1.8;
-    }
-  
-    .card:nth-child(2) {
-      margin-top: 0;
-    }
-  
-    .card:nth-child(3) {
-      margin-top: 0px;
-    }
-}
- 
   
   /* #region Start Now */
 .start-now {
@@ -571,17 +389,7 @@ html {
     margin-bottom: 25px;
     color: white;
   }
-  
-  @media (max-width: 468px) {
-    .start-now {
-      background-image: url(images//bg-boost-mobile.svg);
-    }
-  
-    .start-now .title {
-      font-size: 28px;
-    }
-  }
- 
+   
   /* #region App Footer */
  .app-footer {
     grid-column: 1/4;
@@ -643,7 +451,190 @@ html {
     line-height: 0;
     text-decoration: none;
   }
+
+
   @media (max-width: 468px) {
+
+    .root {
+      grid-template-columns: 15px 1fr 15px;
+    }
+    
+    .app-header {
+      height: 90px;
+    }
+  
+    .app-header .toggle-nav {
+      display: block;
+    }
+  
+    .app-header .navbar {
+      justify-content: space-between;
+    }
+  
+    .app-header .navbar-nav {
+      position: absolute;
+      top: 90px;
+      left: 15px;
+      right: 15px;
+      background-color: var(--dark-violet);
+      display: flex;
+      flex-direction: column;
+      padding: 20px 24px 40px;
+      border-radius: 9px;
+    }
+    //.app-header .navbar-nav a {
+      a {
+      padding: 15px 0;
+      margin-right: 0;
+      font-size: 18px;
+      color: white;
+    }
+  
+    &active {
+      color: var(--gray);
+    }
+  
+    .app-header .btn {
+      align-self: stretch;
+      font-weight: var(--font-weight-bold);
+      font-size: 18px;
+    }
+  
+    .app-header .btn-login {
+      margin-left: 0;
+      color: white;
+      background-color: transparent;
+      margin-bottom: 15px;
+    }
+  
+    //.app-header .btn-login:active {
+      &active{
+      color: var(--gray);
+    }
+    .separator-mobile {
+        background: var(--gray);
+        height: 1px;
+        align-self: stretch;
+        margin: 20px 0 30px;
+      }
+    
+      #nav-visible:not(:checked) ~ .navbar .navbar-nav {
+        display: none;
+      }
+
+    .intro .content {
+      grid-row: 2;
+      max-width: none;
+      align-items: center;
+    }
+
+
+  .intro .title {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .intro .desc {
+    color: var(--grayish-violet);
+    text-align: center;
+    max-width: none;
+    margin-bottom: 35px;
+  }
+
+  .intro .img-wrapper {
+    width: 100%;  
+    max-width: 530px;
+    margin:0 auto;
+    padding-left: 15px;
+  }
+  .intro img {
+    margin-bottom: 40px;
+    object-position: 0px 0;
+    width: 100%;
+  }
+
+  .intro .shorten-url-form {
+    grid-row: 3;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .intro .shorten-url-form {
+    background: var(--dark-violet) url(images/bg-shorten-mobile.svg) no-repeat;
+    background-position: right top;
+    padding: 25px;
+  }
+
+  .intro .shorten-url-form input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px 23px;
+    font-size: 16px;
+  }
+
+  .intro .shorten-url-form .btn {
+    padding: 16px 40px;
+  }
+    
+    .stats .title {
+      font-size: 32px;
+    }
+  
+    .stats .desc {
+      line-height: 1.8;
+    }
+  
+    .stats .desc br {
+      display: none;
+    }
+  
+    .cards {
+      grid-template-columns: 1fr;
+      row-gap: 92px;
+    }
+  
+    .cards .card {
+      text-align: center;
+    }
+  
+    .card:not(:last-child)::after {
+      position: absolute;
+      content: '';
+      background-color: var(--cyan);
+      width: 8px;
+      height: 47px;
+      left: 50%;
+      top: 100%;
+      right: auto;
+      transform: translateX(-50%);
+    }
+  
+    .card .card-icon {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  
+    .card .card-body {
+      font-size: 15px;
+      line-height: 1.8;
+    }
+  
+    .card:nth-child(2) {
+      margin-top: 0;
+    }
+  
+    .card:nth-child(3) {
+      margin-top: 0px;
+    }
+    .start-now {
+      background-image: url(images//bg-boost-mobile.svg);
+    }
+  
+    .start-now .title {
+      font-size: 28px;
+    }
+
    .app-footer {
       grid-template-columns: 1fr;
     }
