@@ -5,25 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+    <title>Frontend ThyaraV</title>
 
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="Estilos/estilo.css" />
-
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <div class="root">
@@ -100,9 +88,16 @@
           <div class="cards">
             <div class="card">
               <div class="card-icon">
-                <img src="images/icon-brand-recognition.svg" alt="" role="presentation" />
+                <a href="#brand-recognition-lightbox">
+                  <img src="images/icon-brand-recognition.svg" />
+                </a>
               </div>
               <div class="card-title">Brand Recognition</div>
+              <div class="lightbox" id="brand-recognition-lightbox">
+                <a href="#" class="close-btn">&times;</a>
+                <span class="lightbox-content" style="background-image: url('images/icon-brand-recognition.svg')"></span>
+                <p class="lightbox-caption">Brand Recognition</p>
+              </div>              
               <div class="card-body">
                 Boost your brand recognition with each click. Generic links don’t mean a thing.
                 Branded links help instil confidence in your content.
@@ -110,9 +105,17 @@
             </div>
             <div class="card">
               <div class="card-icon">
-                <img src="images/icon-detailed-records.svg" alt="" role="presentation" />
+                <a href="#detailed-records-lightbox">
+                  <img src="images/icon-detailed-records.svg" alt="" role="presentation" />
+                </a>
               </div>
               <div class="card-title">Detailed Records</div>
+              <div class="lightbox" id="detailed-records-lightbox">
+                <a href="#" class="close-btn">&times;</a>
+                <span class="lightbox-content" style="background-image: url('images/icon-detailed-records.svg')"></span>
+                <p class="lightbox-caption">Detailed Records</p>
+              </div>
+              
               <div class="card-body">
                 Gain insights into who is clicking your links. Knowing when and where people engage
                 with your content helps inform better decisions.
@@ -120,9 +123,16 @@
             </div>
             <div class="card">
               <div class="card-icon">
-                <img src="images/icon-fully-customizable.svg" alt="" role="presentation" />
+                <a href="#fully-customizable-lightbox">
+                  <img src="images/icon-fully-customizable.svg" alt="" role="presentation" />
+                </a>
               </div>
               <div class="card-title">Fully Customizable</div>
+              <div class="lightbox" id="fully-customizable-lightbox">
+                <a href="#" class="close-btn">&times;</a>
+                <span class="lightbox-content" style="background-image: url('images/icon-fully-customizable.svg')"></span>
+                <p class="lightbox-caption">Fully Customizable</p>
+              </div>   
               <div class="card-body">
                 Improve brand awareness and content discoverability through customizable links,
                 supercharging audience engagement.

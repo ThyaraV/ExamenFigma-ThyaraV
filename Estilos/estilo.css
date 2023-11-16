@@ -68,6 +68,78 @@ input {
   }
 }
 /* Otros estilos... (botones, encabezado, intro, stats, start-now, app-footer, etc.) */
+/* Estilos para la lightbox */
+img {
+  max-height: 50vh;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: #bbb;
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1em;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox:target {
+  display: block;
+}
+
+.lightbox-content {
+  display: block;
+  width: 100%;
+  height: 80%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.lightbox-caption {
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.lightbox-content {
+  display: block;
+  width: 100%;
+  height: 80%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.lightbox-caption {
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+
+
+
 .btn {
   font-family: var(--font-family-sans-serif);
   border-radius: 30px;
